@@ -8,11 +8,11 @@ var GCharacter = req('game/character'),
 
 function Game() {
   this._pressedKeys = {};
-  this._pressedDirections = new Array();
+  this._pressedDirections = [];
   this.fps = 60;
   this.tick = 0;
   this._debug = true;
-};
+}
 
 Game.prototype.keyDown = function(e) {
   if (e.keyCode >= 37 && e.keyCode <= 40) {

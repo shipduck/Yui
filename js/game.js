@@ -6,7 +6,7 @@ var Game = req('game/main');
 
 $(document).ready(function() {
   window.game = new Game();
-  game.run();
+  window.game.run();
 });
 
 });
