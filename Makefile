@@ -17,6 +17,10 @@ coverage: instrument
 	$(BIN)/mocha --bail --reporter mocha-istanbul $(UNIT_TESTS)
 	$(MAKE) move-reports
 
+complexity:
+	mkdir -p reports
+	$(BIN)/cr -f xml -o reports/complexity.xml lib
+
 move-reports:
 	-mkdir -p reports
 	-mv cobertura-coverage.xml reports

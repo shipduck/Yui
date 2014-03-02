@@ -22,7 +22,8 @@
   "dependencies": {
     "mocha": "~1.17.1",
     "istanbul": "~0.2.4",
-    "mocha-istanbul": "~0.2.0"
+    "mocha-istanbul": "~0.2.0",
+    "complexity-report": "*"
   },
   "keywords": [
     "mmo"
