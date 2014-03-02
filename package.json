@@ -17,7 +17,7 @@
     }
   ],
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test -R xunit > js-xunit.xml"
   },
   "dependencies": {
     "mocha": "~1.17.1"
