@@ -52,6 +52,59 @@ describe('BirthdayGenerator', function() {
     it('random', function() {
       var gen = new person_gen.BirthdayGenerator();
       var data = gen();
+      //console.log(data);
+    })
+  })
+})
+
+describe('GenderGenerator', function() {
+  describe('#call', function() {
+    it('defined', function() {
+      var gender = 'm';
+      for(var i = 0 ; i < 10 ; i++) {
+        var gen = new person_gen.GenderGenerator({'gender': gender});
+        var actual = gen();
+        assert.equal(gender, actual);
+      }
+    })
+    it('random', function() {
+      var gen = new person_gen.GenderGenerator();
+      var actual = gen();
+      //console.log(actual);
+    })
+  })
+})
+
+describe('NameGenerator', function() {
+  describe('#call', function() {
+    it('define last', function() {
+      var last = '테';
+      var gen = new person_gen.NameGenerator({'last': last});
+      var actual = gen();
+      assert.equal(last, actual.last);
+    })
+
+    it('define first', function() {
+      var first = '철수';
+      var gen = new person_gen.NameGenerator({'first': first});
+      var actual = gen();
+      assert.equal(first, actual.first);
+    })
+
+    it('define gender', function() {
+      var gender = 'm';
+      var gen = new person_gen.NameGenerator({'gender': gender});
+      var actual = gen();
+
+      var gender = 'f';
+      var gen = new person_gen.NameGenerator({'gender': gender});
+      var actual = gen();
+    })
+
+    it('random', function() {
+      var gen = new person_gen.NameGenerator();
+      var actual = gen();
+      //console.log(actual);
     })
   })
 })
