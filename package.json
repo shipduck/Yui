@@ -20,7 +20,9 @@
     "test": "mocha test -R xunit > js-xunit.xml"
   },
   "dependencies": {
-    "mocha": "~1.17.1"
+    "mocha": "~1.17.1",
+    "istanbul": "~0.2.4",
+    "mocha-istanbul": "~0.2.0"
   },
   "keywords": [
     "mmo"

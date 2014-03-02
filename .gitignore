@@ -28,4 +28,6 @@ build/Release
 node_modules
 
 # xunit
+reports/
 js-xunit.xml
+

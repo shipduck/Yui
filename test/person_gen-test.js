@@ -1,6 +1,6 @@
 if(typeof window === 'undefined') {
   assert = require('assert');
-  person_gen = process.env.LIB_COV ? require('../lib-cov/person_gen.js') : require('../lib/person_gen.js');
+  person_gen = process.env.EXPRESS_COV ? require('../lib-cov/person_gen.js') : require('../lib/person_gen.js');
 }
 
 describe('BirthdayGenerator', function() {
