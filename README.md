@@ -1,3 +1,5 @@
+[![Build Status](http://ci.omniavinco.kr/buildStatus/icon?job=YUI)](http://ci.omniavinco.kr/job/YUI/)
+
 Yui
 ===
 
