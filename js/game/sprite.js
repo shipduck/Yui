@@ -15,7 +15,6 @@ GSprite.prototype.show = function() {
   $('body').append(this.element);
 };
 GSprite.prototype.hide = function() {
-  this.element;
 };
 return GSprite;
 });

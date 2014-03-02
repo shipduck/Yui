@@ -12,7 +12,7 @@ var Dialog = function(origin, size) {
   };
   this.setContent = function(text) {
     contentWrap.html(text);
-  }
+  };
   $('#screen').append(this.dialog);
 };
 return Dialog;
