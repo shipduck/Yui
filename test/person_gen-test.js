@@ -165,8 +165,6 @@ describe('SSNGenerator', function() {
       var genderGen = new person_gen.GenderGenerator();
       data['gender'] = genderGen();
 
-      console.log(data);
-
       var generator = new person_gen.SSNGenerator(data);
       var validator = new person_gen.SSNValidator();
 
