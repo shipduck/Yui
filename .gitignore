@@ -31,3 +31,5 @@ node_modules
 reports/
 js-xunit.xml
 
+# distribute
+publish

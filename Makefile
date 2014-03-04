@@ -30,3 +30,7 @@ move-reports:
 clean-coverage:
 	-rm -rf $(INSTRUMENTATION_OUTPUT)
 	-rm -rf $(REPORTS)
+
+publish:
+	mkdir -p publish
+	bower install
