@@ -31,5 +31,8 @@ node_modules
 reports/
 js-xunit.xml
 
-# distribute
-publish
+# bower
+public/bower_components
+
+# auto generated file
+public/stylesheets
