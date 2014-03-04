@@ -2,6 +2,7 @@
   "name": "yui",
   "description": "Web MMO Rogue-like RPG Client",
   "version": "0.0.1",
+  "private": false,
   "homepage": "https://github.com/shipduck/yui",
   "repository": {
     "type": "git",
@@ -17,13 +18,17 @@
     }
   ],
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test --recursive",
+    "start": "node app.js"
   },
   "dependencies": {
     "mocha": "~1.17.1",
     "istanbul": "~0.2.4",
     "mocha-istanbul": "~0.2.0",
-    "complexity-report": "*"
+    "complexity-report": "*",
+    "express": "3.x",
+    "ejs": "*",
+    "stylus": "*"
   },
   "keywords": [
     "mmo"

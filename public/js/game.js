@@ -1,7 +1,9 @@
 require.config({
 });
 
-require(['require', 'game/main', 'jquery.min'], function(req) {
+require(['require',
+         'game/main',
+         '/bower_components/jquery/dist/jquery.min.js'], function(req) {
 var Game = req('game/main');
 
 $(document).ready(function() {
