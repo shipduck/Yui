@@ -18,7 +18,7 @@
     }
   ],
   "scripts": {
-    "test": "mocha test --recursive",
+    "test": "mocha --compilers coffee:coffee-script/register test --recursive",
     "start": "node app.js"
   },
   "dependencies": {
@@ -28,7 +28,9 @@
     "complexity-report": "*",
     "express": "3.x",
     "ejs": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "less": "*",
+    "coffee-script": "~1.7.1"
   },
   "keywords": [
     "mmo"
