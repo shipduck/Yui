@@ -18,17 +18,19 @@
     }
   ],
   "scripts": {
-    "test": "mocha test --recursive",
+    "test": "mocha --compilers coffee:coffee-script/register test --recursive",
     "start": "node app.js"
   },
   "dependencies": {
     "mocha": "~1.17.1",
-    "istanbul": "~0.2.4",
-    "mocha-istanbul": "~0.2.0",
     "complexity-report": "*",
     "express": "3.x",
     "ejs": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "less": "*",
+    "coffee-script": "~1.7.1",
+    "coffee-coverage": "*",
+    "mocha-cobertura-reporter": "*"
   },
   "keywords": [
     "mmo"
