@@ -5,7 +5,10 @@ REPORTS = reports
 
 xunit:
 	mkdir -p reports
-	mocha -R xunit > reports/js-xunit.xml
+	mocha test	\
+		--compilers coffee:coffee-script/register	\
+		--recursive	\
+		-R xunit > reports/js-xunit.xml
 
 instrument: clean-coverage
 	$(BIN)/istanbul instrument --output $(INSTRUMENTATION_OUTPUT) --no-compact	\
