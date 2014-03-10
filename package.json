@@ -30,7 +30,15 @@
     "less": "*",
     "coffee-script": "~1.7.1",
     "coffee-coverage": "*",
-    "mocha-cobertura-reporter": "*"
+    "mocha-cobertura-reporter": "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-bower-task": "*",
+    "grunt-bower-requirejs": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-less": "*"
   },
   "keywords": [
     "mmo"

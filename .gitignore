@@ -32,7 +32,7 @@ reports/
 js-xunit.xml
 
 # bower
-public/bower_components
+bower_components
 
-# auto generated file
-public/stylesheets
+# published files
+publish
