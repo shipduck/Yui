@@ -1,7 +1,7 @@
 require ['jquery', 'pixijs', 'ui/ui'], ($, PIXI, ui) ->
   # Remove Loading Message
   $ '#loadingMessage'
-  .remove;
+  .remove()
 
   # Game Config
   config = 
@@ -13,14 +13,14 @@ require ['jquery', 'pixijs', 'ui/ui'], ($, PIXI, ui) ->
 
   # Init stage(Black background)
   stage = new PIXI.Stage 0x000000
-  renderer = PIXI.autoDetectRenderer WIDTH, HEIGHT
+  renderer = PIXI.autoDetectRenderer config.WIDTH, config.HEIGHT
 
   # Add Render target view
   $ '#viewPlaceholder'
   .append renderer.view
 
   # ui test
-  newView = new ui.view;
+  newView = new ui.View;
   newView.setCenter 400, 300
   newView.setSize 200, 200
   newView.setBorder true 

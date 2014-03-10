@@ -18,18 +18,18 @@ define ['pixijs'], (PIXI) ->
       @_g.clear
       if @_border
         @_g.lineStyle 2, 0xFFFFFF
-        _g.drawRect (@_frame.x - 1), (@_frame.y - 1), (@_frame.width - 2), (@_frame.height - 2)
+        @_g.drawRect (@_frame.x - 1), (@_frame.y - 1), (@_frame.width - 2), (@_frame.height - 2)
 
     moveBy: (x, y) ->
       @_frame.x += x
       @_frame.y += y
-      _moveChildren x, y
-      render
+      @_moveChildren x, y
+      @render()
 
     moveTo: (x, y) ->
       deltaX = x - @_frame.x
       deltaY = y - @_frame.y
-      moveBy x, y
+      @moveBy deltaX, deltaY
 
     _moveChildren: (x, y) ->
       child.moveBy x, y for child in @_children
@@ -38,8 +38,8 @@ define ['pixijs'], (PIXI) ->
       if typeof child is 'undefined'
         console.log 'Error : invalid child'
         return
-      @_children.push child;
-      child._parent = this;
+      @_children.push child
+      child._parent = this
 
     setBorder: (b) ->
       if typeof b != 'boolean'
@@ -48,19 +48,19 @@ define ['pixijs'], (PIXI) ->
       if @_border is b
         return;
       @_border = b;
-      render();
+      @render()
 
     setPosition: (x, y) ->
       @_useCenter = false
-      moveTo x, y
+      @moveTo x, y
 
     setCenter: (x, y) ->
-      _useCenter = true
-      moveTo (x - this._frame.width  / 2), (y - this._frame.height / 2)
+      @_useCenter = true
+      @moveTo (x - this._frame.width  / 2), (y - this._frame.height / 2)
 
     setSize: (w, h) ->
       if @_useCenter
-        moveBy ((@_frame.width - w) / 2), ((@_frame.height - h) / 2)
+        @moveBy ((@_frame.width - w) / 2), ((@_frame.height - h) / 2)
       @_frame.width = w;
       @_frame.height = h;
-      render
+      @render()
