@@ -3,16 +3,23 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    bower: {
-      install: {
-        targetDir: root + '/lib',
-        layout: 'byComponent',
-        bowerOptions: {
-          production: true
-        }
+    bowerrc: grunt.file.readJSON('.bowerrc'),
+    bowercopy: {
+      options: {
+        clean: false
       },
-      target: {
-        rjsConfig: root + '/js/main.js'
+      glob: {
+        files: {
+          'publish/libs/js': ['assert/*.js',
+                              'bootstrap/dist/js/*.js',
+                              'jquery/dist/*.js',
+                              'mocha/*.js',
+                              'pixijs/bin/*.js',
+                              'requirejs/*.js'],
+          'publish/libs/css': ['bootstrap/dist/css/*.css',
+                               'mocha/*.css'],
+          'publish/libs/fonts': ['bootstrap/dist/fonts/*']
+        }
       }
     },
     coffee: {
@@ -67,7 +74,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-bower');
+  grunt.loadNpmTasks('grunt-bowercopy');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-bower-requirejs');
   grunt.loadNpmTasks('grunt-contrib-coffee');
@@ -75,5 +82,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task(s).
-  grunt.registerTask('build', ['coffee', 'bower', 'htmlmin', 'less', 'copy']);
+  grunt.registerTask('default', ['coffee', 'bowercopy', 'htmlmin', 'less', 'copy']);
 };

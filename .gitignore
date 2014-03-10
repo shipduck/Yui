@@ -33,6 +33,7 @@ js-xunit.xml
 
 # bower
 bower_components
+bower-components
 
 # published files
 publish
